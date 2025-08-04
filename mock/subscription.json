@@ -1,0 +1,5 @@
+[
+	{ "type": "Beginner", "price": "0.00" },
+	{ "type": "Professional", "price": "19.99" },
+	{ "type": "Tourism", "price": "49.99" }
+]

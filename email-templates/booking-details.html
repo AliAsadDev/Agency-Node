@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      a {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #ddd;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+      }
+      .wrapper {
+        width: 630px;
+        margin: 0 auto;
+        background-color: #fff;
+      }
+      .header {
+        background-color: #f37032;
+        color: #fff;
+        overflow: hidden;
+        padding: 20px;
+      }
+      .logo {
+        float: left;
+        width: 300px;
+      }
+      .right-text {
+        float: right;
+      }
+
+      .right-text a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      .right-text a:hover {
+        color: yellow;
+      }
+
+      .inner {
+        padding: 20px;
+      }
+      .content p {
+        padding-bottom: 15px;
+      }
+      .info {
+        overflow: hidden;
+        margin-top: 20px;
+      }
+      .rest-info {
+        float: left;
+        width: 285px;
+        overflow: hidden;
+      }
+      .rest-detail h3,
+      .booking-info h3 {
+        color: #f37032;
+      }
+      .rest-detail p {
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+      .booking-info p {
+        margin-bottom: 10px;
+      }
+      .booking-info {
+        float: right;
+        width: 285px;
+        position: relative;
+        padding-left: 15px;
+      }
+      .booking-info::before {
+        content: "";
+        background: #7070704f;
+        height: 125px;
+        width: 3px;
+        position: absolute;
+        left: 0;
+        top: 15px;
+      }
+      .offer-text {
+        font-size: 10px;
+        margin-left: 20px;
+      }
+      .icon-text {
+        font-weight: 700;
+      }
+      .icon-text a {
+        text-decoration: navajowhite;
+        color: green;
+      }
+      .icon-text.offer {
+        color: #ff0000;
+        margin-bottom: 0;
+      }
+      .icon-text i {
+        margin-right: 3px;
+      }
+      .rest-image {
+        float: left;
+        margin-right: 20px;
+      }
+      .rest-image img {
+        width: 120px;
+        min-width: 120px;
+        max-width: 120px;
+        height: 130px;
+        min-height: 130px;
+        max-height: 130px;
+        box-shadow: 5px 7px 0px #d9d9d9;
+      }
+      .btn-area {
+        text-align: center;
+        margin: 20px;
+      }
+      .btn-area a {
+        text-decoration: none;
+        padding: 7px 15px;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-right: 15px;
+        border-radius: 2px;
+      }
+      .btn-area a:last-child {
+        margin-right: 0px;
+      }
+      .btn-add {
+        background-color: #ffa938;
+      }
+      .btn-invite {
+        background-color: #7bbb2a;
+      }
+      .btn-cancel {
+        background-color: red;
+      }
+      .restaurant .single-restaurant {
+        display: inline-block;
+      }
+      .single-restaurant {
+        position: relative;
+      }
+      .overlay {
+        /* background-color: #000; */
+        height: 100%;
+        width: 100%;
+      }
+      .restaurant-content {
+        z-index: 99;
+        color: #fff;
+      }
+      .discount {
+        position: absolute;
+        right: 0;
+        background: red;
+        color: #fff;
+        font-weight: 700;
+        margin: 0;
+        padding: 2px 3px !important;
+        font-size: 15px;
+        top: 0;
+      }
+      .menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 2px 3px !important;
+        margin: 0;
+        background: green;
+        color: #fff;
+      }
+      .namebg {
+        background-color: #000;
+        position: absolute;
+        bottom: 0px;
+        padding-bottom: 10px;
+        width: 100%;
+        opacity: 0.8;
+      }
+      .namebg h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        margin: 0;
+        padding: 0 0 0 5px;
+      }
+      .namebg p {
+        margin: 0;
+        padding: 3px 8px;
+        background: #fff;
+        display: inline-block;
+        color: #000;
+        text-transform: uppercase;
+        font-size: 10px;
+        border-radius: 2px;
+        margin-left: 5px;
+      }
+      .single-restaurant {
+        width: 185px;
+        height: 145px;
+        background-position: center center;
+        background-size: cover;
+        margin-right: 8px;
+      }
+      .restaurant h3 {
+        padding: 15px 0px 7px 0;
+        color: #171717;
+        font-weight: 700;
+      }
+      .leftFaq {
+        width: 50%;
+        display: inline-block;
+      }
+
+      /* .righFaq {
+				width: 50%;
+				float: right;
+			} */
+      .righFaq p {
+        margin-top: 15px;
+      }
+      .leftFaq {
+        float: left;
+      }
+
+      .faq {
+        overflow: hidden;
+      }
+      .notetext p {
+        text-align: center;
+        padding: 25px 0 0 0;
+        color: #171717;
+        font-weight: 700;
+        font-size: 15px;
+      }
+      .footer {
+        background: #007077;
+        color: #fff;
+      }
+
+      .footer ul {
+        list-style: none;
+      }
+
+      .footer ul li {
+        display: inline-block;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      .footer ul li a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        padding: 0 5px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .footer ul li a:hover {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo">
+          <a href="https://elplatorico.es" target="_blank"
+            ><img
+              src="https://api.elplatorico.es/uploads/white-logo.png"
+              alt="Elplatorico"
+          /></a>
+        </div>
+        <div class="right-text">
+          <a href="https://elplatorico.es" target="_blank">elplatorico.es</a>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="content">
+          <p>Hello, <strong>{{Name}}</strong></p>
+          <p>
+            Gracias por reservar con Elplatorico! Por favor, consulte la
+            siguiente información de reserva. Si es un usuario registrado,
+            obtendrá 10 puntos de recompensa después de visitar el restaurante.
+          </p>
+        </div>
+
+        <div class="info">
+          <div class="rest-info">
+            <div class="rest-image">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                alt=""
+              />
+            </div>
+            <div class="rest-detail">
+              <h3>En el Restaurante:</h3>
+              <p class="icon-text">
+                <i class="fas fa-home"></i> {{RestaurantName}}
+              </p>
+              <p class="icon-text">
+                <i class="fas fa-map-marker-alt"></i> {{RestaurantAddress}}
+              </p>
+              <p class="icon-text">
+                <i class="fas fa-map-marked"></i> <a href="">Ver Mapa</a>
+              </p>
+            </div>
+          </div>
+          <div class="booking-info">
+            <h3>Reserva confirmada</h3>
+            <p class="icon-text">
+              <i class="far fa-calendar-alt"></i> {{Date}} {{Time}}
+            </p>
+            <p class="icon-text">
+              <i class="fas fa-user"></i> {{person}} Personas
+            </p>
+            <p class="icon-text">
+              <i class="fas fa-id-badge"></i> Booking Status: {{status}}
+            </p>
+            {{menu}} {{discount}}
+          </div>
+        </div>
+
+        <div class="btn-area">
+          <a class="btn-add" href="">añadir al calendario</a>
+          <!-- <a class="btn-invite" href="">Invitar a amigas</a> -->
+          <a class="btn-cancel" href="{{URL}}" target="_blank"
+            >Cancelar reserva</a
+          >
+        </div>
+
+        <div class="restaurant">
+          <h3>Restaurante popular cerca de ti</h3>
+          {{popularRest}}
+        </div>
+        <div class="faq">
+          <!-- <div class="leftFaq">
+						<p>
+							Por favor, sé puntual ;) Cualquier llegada posterior a la hora de reserva (+/-15 min) puede
+							implicar la no aplicación de la promoción y / o la pérdida de tu mesa.
+						</p>
+					</div> -->
+          <div class="righFaq">
+            <p>
+              Por favor, sé puntual. Cualquier llegada posterior a la hora de
+              reserva (+/-15 min) puede implicar la no aplicación de la
+              promoción y / o la pérdida de tu mesa.
+            </p>
+          </div>
+        </div>
+        <div class="notetext">
+          <p>
+            Nota: ¿Necesita modificar su reserva? Por favor, cancele y reserve
+            de nuevo.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <ul>
+          <li>&copy; 2020, Elplatorico</li>
+          <!-- <li><a href="">Home</a></li>
+					<li><a href="">Home</a></li>
+					<li><a href="">Home</a></li>
+					<li><a href="">Home</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

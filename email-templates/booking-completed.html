@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      a,
+      img {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      .container {
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .logo img {
+        margin-top: 40px;
+        margin-bottom: 0;
+        max-width: 300px;
+      }
+      .content {
+        background-color: #fff;
+        padding: 45px 30px 45px 30px;
+        border-radius: 20px;
+        -webkit-box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 15px #ece5e5;
+      }
+      .hand img {
+        margin-top: -50px;
+        min-width: 65px;
+        max-width: 65px;
+        margin-bottom: 15px;
+      }
+
+      .inner-text h4 {
+        text-align: left;
+      }
+      .inner-text p {
+        text-align: left;
+        margin-top: 10px;
+      }
+
+      .btn-feedback {
+        text-decoration: none;
+        color: #fff;
+        background-color: #ed7035;
+        padding: 10px 25px;
+        font-size: 16px;
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 20px;
+        border-radius: 3px;
+        transition: 0.3s;
+      }
+      .btn-feedback:hover {
+        background-color: #c75019;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="https://api.elplatorico.es/uploads/mail-logo.png" alt="" />
+      </div>
+      <div class="content">
+        <div class="stars">
+          <img src="https://api.elplatorico.es/uploads/star.png" alt="" />
+        </div>
+        <div class="hand">
+          <img src="https://api.elplatorico.es/uploads/hand.png" alt="" />
+        </div>
+        <div class="inner-text">
+          <h4>Gracias por visitar el restaurante.</h4>
+          <p>
+            Haga clic en el botón a continuación y deje su opinión sobre este
+            restaurante que visitó. Realmente apreciamos su comentario. Su
+            valioso comentario ayudará a mejorar nuestro servicio al cliente.
+            Gracias otra vez
+          </p>
+          <a href="{{URL}}" class="btn-feedback" target="_blank"
+            >Click Here and give feedback</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

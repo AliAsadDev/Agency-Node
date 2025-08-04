@@ -1,0 +1,28 @@
+{
+	"apps": [
+		{
+			"name": "API Server",
+			"cwd": "./server",
+			"script": "npm start",
+			"env": {
+				"NODE_ENV": "production"
+			}
+		},
+		{
+			"name": "Customer Website",
+			"cwd": "./customer",
+			"script": "serve -s build -l 5001",
+			"env": {
+				"NODE_ENV": "production"
+			}
+		},
+		{
+			"name": "Agency Website",
+			"cwd": "./agency",
+			"script": "serve -s build -l 5002",
+			"env": {
+				"NODE_ENV": "production"
+			}
+		}
+	]
+}
